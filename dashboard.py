@@ -24,7 +24,7 @@ data = df[df['season'] == musim_data]
 st.header(f'Untuk Musim {selected_musim}')
 
 fig= plt.figure(figsize=(8, 6))
-sns.violinplot(x='workingday', y='cnt', data=data)
+sns.boxplot(x='workingday', y='cnt', data=data)
 plt.xlabel('Hari Kerja atau Hari Libur')
 xlabels = ['Hari Libur','Hari Kerja']
 x = np.arange(len(xlabels))
